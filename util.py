@@ -577,7 +577,7 @@ def flipCoin(p):
 
 def chooseFromDistribution(distribution):
     "Takes either a counter or a list of (prob, key) pairs and samples"
-    if type(distribution) == dict or type(distribution) == Counter:
+    if type(distribution) in [dict, Counter]:
         return sample(distribution)
     r = random.random()
     base = 0.0
@@ -596,7 +596,6 @@ def nearestPoint(pos):
     grid_row = int(current_row + 0.5)
     grid_col = int(current_col + 0.5)
     return (grid_row, grid_col)
-
 
 def sign(x):
     """
