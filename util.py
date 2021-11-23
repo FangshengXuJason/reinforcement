@@ -334,7 +334,7 @@ class Counter(dict):
         """
         Returns the key with the highest value.
         """
-        if len(list(self.keys())) == 0:
+        if not list(self.keys()):
             return None
         all = list(self.items())
         values = [x[1] for x in all]
