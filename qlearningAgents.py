@@ -18,6 +18,7 @@ from featureExtractors import *
 
 import random,util,math
 
+
 class QLearningAgent(ReinforcementAgent):
     """
       Q-Learning Agent
@@ -52,7 +53,6 @@ class QLearningAgent(ReinforcementAgent):
         """
         "*** YOUR CODE HERE ***"
         util.raiseNotDefined()
-
 
     def computeValueFromQValues(self, state):
         """
