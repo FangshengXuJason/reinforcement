@@ -597,6 +597,7 @@ def nearestPoint(pos):
     grid_col = int(current_col + 0.5)
     return (grid_row, grid_col)
 
+
 def sign(x):
     """
     Returns 1 or -1 depending on the sign of x
