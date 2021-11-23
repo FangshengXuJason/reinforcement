@@ -17,6 +17,7 @@
 from game import Directions, Actions
 import util
 
+
 class FeatureExtractor:
     def getFeatures(self, state, action):
         """
@@ -26,11 +27,13 @@ class FeatureExtractor:
         """
         util.raiseNotDefined()
 
+
 class IdentityExtractor(FeatureExtractor):
     def getFeatures(self, state, action):
         feats = util.Counter()
         feats[(state,action)] = 1.0
         return feats
+
 
 class CoordinateExtractor(FeatureExtractor):
     def getFeatures(self, state, action):
@@ -40,6 +43,7 @@ class CoordinateExtractor(FeatureExtractor):
         feats['y=%d' % state[0]] = 1.0
         feats['action=%s' % action] = 1.0
         return feats
+
 
 def closestFood(pos, food, walls):
     """
@@ -62,6 +66,7 @@ def closestFood(pos, food, walls):
             fringe.append((nbr_x, nbr_y, dist+1))
     # no food found
     return None
+
 
 class SimpleExtractor(FeatureExtractor):
     """
